@@ -1,0 +1,3 @@
+name: halfcheetah
+env_id: brax-halfcheetah-v0
+backend: Brax

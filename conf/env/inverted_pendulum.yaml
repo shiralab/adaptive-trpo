@@ -1,0 +1,3 @@
+name: inverted_pendulum
+env_id: brax-inverted-pendulum-v0
+backend: Brax

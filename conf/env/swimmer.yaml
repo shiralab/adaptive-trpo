@@ -1,0 +1,3 @@
+name: swimmer
+env_id: brax-swimmer-v0
+backend: Brax

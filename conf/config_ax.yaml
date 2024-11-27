@@ -1,0 +1,34 @@
+defaults:
+  - config
+  - search_space/ax@hydra.sweeper.ax_config.params: ${algorithm}
+  - override hydra/sweeper: ax
+  - _self_
+
+hpo:
+  seeds: [0, 1, 2, 3]
+  aggregator: iqm
+  num_processes: 4
+  device_env: gpu
+  device_algo: gpu
+  available_gpu_ids: [0, 1, 2, 3]
+
+logger:
+  wandb:
+    group: hpo
+
+hydra:
+  sweeper:
+    ax_config:
+      max_trials: 30
+      experiment:
+        name: ${logger.experiment_name}
+        minimize: True
+      early_stop:
+        minimize: true
+        max_epochs_without_improvement: 5
+        epsilon: 1.0e-02
+      client:
+        verbose_logging: False
+        random_seed: 42
+      is_noisy: True
+

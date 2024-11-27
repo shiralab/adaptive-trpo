@@ -1,0 +1,6 @@
+defaults:
+  - kl_update_strength_func: constant
+  - projection: clamp
+
+name: exp-by-snr
+target_snr: 1.4

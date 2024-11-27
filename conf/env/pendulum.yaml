@@ -1,0 +1,3 @@
+name: pendulum
+env_id: Pendulum-v1
+backend: Gym

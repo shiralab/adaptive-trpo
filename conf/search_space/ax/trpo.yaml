@@ -1,0 +1,5 @@
+algorithm.target_kl:
+  value_type: float
+  type: range
+  bounds: [0.0001, 0.1]
+  log_scale: True

@@ -1,0 +1,51 @@
+[tool.poetry]
+package-mode = false
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "~3.10"
+stable-baselines3 = "^1.6.0"
+mlflow = "^1.27.0"
+hydra-core = "^1.2.0"
+sb3-contrib = "^1.6.0"
+pyglet = "^1.5.26"
+brax = "^0.9"
+scipy = "^1.7.2"
+jupyterlab = "^3.4.6"
+seaborn = "^0.12.0"
+pandas = "1.4.0"
+rliable = "^1.0.8"
+setuptools = "65.5.0"
+gym = "0.21.0"
+pytinyrenderer = "0.0.14"
+wandb = "^0.16.0"
+hydra-ax-sweeper = "^1.2.0"
+protobuf = "3.20.*"
+tensorboard = "^2.15.1"
+gpytorch = "1.8.0"
+sqlalchemy = "1.4.17"
+torch = "2.0.1"
+numba = "^0.59.1"
+nvidia-cublas-cu11 = { version = "11.10.3.66", platform = 'linux' }
+nvidia-cuda-cupti-cu11 = { version = "11.7.101", platform = 'linux' }
+nvidia-cuda-nvrtc-cu11 = { version = "11.7.99", platform = 'linux' }
+nvidia-cuda-runtime-cu11 = { version = "11.7.99", platform = 'linux' }
+nvidia-cudnn-cu11 = { version = "8.5.0.96", platform = 'linux' }
+nvidia-cufft-cu11 = { version = "10.9.0.58", platform = 'linux' }
+nvidia-curand-cu11 = { version = "10.2.10.91", platform = 'linux' }
+nvidia-cusolver-cu11 = { version = "11.4.0.1", platform = 'linux' }
+nvidia-cusparse-cu11 = { version = "11.7.4.91", platform = 'linux' }
+nvidia-nccl-cu11 = { version = "2.14.3", platform = 'linux' }
+nvidia-nvtx-cu11 = { version = "11.7.91", platform = 'linux' }
+triton = { version = "2.0.0", platform = 'linux' }
+
+[tool.poetry.dev-dependencies]
+pytest = "^8.0"
+black = "^22.6.0"
+mypy = "^0.971"
+flake8 = "^4.0.1"
+isort = "^5.10.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,14 @@
+  algorithm.target_kl:
+    type: range
+    bounds: [0.0001, 0.1]
+    log_scale: True
+  algorithm.smoothing_coeff_func.const:
+    type: range
+    bounds: [0.0, 1.0]
+  algorithm.kl_update_ratio_func.target_snr:
+    type: range
+    bounds: [1.0, 5.0]
+  algorithm.kl_update_ratio_func.kl_update_strength_func.const:
+    type: range
+    bounds: [0.0001, 0.1]
+    log_scale: False

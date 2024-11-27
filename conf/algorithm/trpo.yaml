@@ -1,0 +1,22 @@
+defaults:
+  - schedule@learning_rate: constant
+
+name: trpo
+n_steps: 2048
+batch_size: 128
+gamma: 0.99
+entcoeff: 0.0 # scale around 0.01 or 0.001 seems fine
+cg_max_steps: 15
+cg_damping: 0.1
+use_line_search: True # should be True
+line_search_shrinking_factor: 0.8
+line_search_max_iter: 10
+n_critic_updates: 10
+gae_lambda: 0.95
+use_sde: False
+sde_sample_freq: -1
+normalize_advantage: True
+target_kl: 0.01
+smoothing_coeff: 0.01
+sub_sampling_factor: 1
+

@@ -1,0 +1,3 @@
+name: hopper
+env_id: brax-hopper-v0
+backend: Brax

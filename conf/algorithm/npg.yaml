@@ -1,0 +1,5 @@
+defaults:
+  - trpo
+
+name: npg
+use_line_search: False  # should be False

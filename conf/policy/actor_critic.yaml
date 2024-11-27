@@ -1,0 +1,15 @@
+defaults:
+  - optimizer: adam
+  - feature_extractor: flatten_extractor
+
+name: actor-critic
+net_arch:
+  pi: [64, 64]
+  vf: [64, 64]
+activation_fn: tanh
+ortho_init: True
+log_std_init: 0.0
+use_expln: False
+full_std: True
+squash_output: False
+normalize_images: True

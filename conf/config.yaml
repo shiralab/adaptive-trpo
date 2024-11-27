@@ -1,0 +1,44 @@
+defaults:
+  - algorithm: trpo
+  - policy: actor_critic
+  - env: pendulum
+  - _self_
+
+experiment:
+  total_timesteps: 1000000
+  n_envs: 1
+  eval_freq: 2048
+  n_eval_envs: 1
+  n_eval_episodes: 20
+  eval_deterministically: True
+  model_save_path: model
+  save_best_model: True
+  return_best_model_result: False
+  gpu_id_algo: -1
+  gpu_id_env: -1
+  seed: 0
+  verbose: 0
+
+demo:
+  n_episodes: 20
+  episode_length: 1000
+  deterministic: True
+  render_mode: rgb_array
+  return_episode_rewards: False
+
+logger:
+  experiment_name: atrpo
+  tensorboard_path: tensorboard
+  video:
+    path: video
+    n_save_files: 1
+    length: ${demo.episode_length}
+    name_prefix: rl-video
+  wandb:
+    use: True
+    entity: null
+    group: null
+  mlflow:
+    tags:
+      task: pendulum
+      algorithm: TRPO

@@ -1,0 +1,3 @@
+name: pusher
+env_id: brax-pusher-v0
+backend: Brax

@@ -1,0 +1,6 @@
+optimizer: ax
+ax:
+  algorithm.target_kl: 0.0012834259559537453
+  algorithm.smoothing_coeff_func.const: 0.12874209135770798
+  algorithm.kl_update_ratio_func.target_snr: 2.11995891854167
+  algorithm.kl_update_ratio_func.kl_update_strength_func.const: 0.06840647444780916

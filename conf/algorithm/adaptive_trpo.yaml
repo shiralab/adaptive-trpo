@@ -1,0 +1,9 @@
+defaults:
+  - trpo
+  - smoothing_coeff_func: constant
+  - kl_update_ratio_func: exp_by_snr
+
+name: adaptive-trpo
+kl_range: [1.0e-9, .inf]
+init_smoothing_coeff: 0.01
+

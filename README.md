@@ -18,8 +18,6 @@ root/
 ├── pyproject.toml          # Poetry project config
 ├── LICENSE                 # MIT License
 └── README.md               # This file
-
-
 ```
 
 ## Setup
@@ -37,7 +35,7 @@ pyenv local 3.10.12
 -   [Install poetry](https://python-poetry.org/docs/)
 -   Install dependencies
     -   Activate the virtual environment: `poetry shell`
-    -   **Note:** gym 0.21 has known installation issues.
+    -   **Note:** gym 0.21 has known installation issues with recent `setuptools`/`pip`, so the following workarounds are required.
 
 ```bash
 pip install setuptools==65.5.0 pip==21  # gym 0.21 installation is broken with more recent versions
@@ -51,8 +49,8 @@ poetry install
     -   Check currently installed torch version: `pip show torch`
     -   Reinstall PyTorch with CUDA support:
         -    Follow the instructions at https://pytorch.org/get-started/previous-versions/
-            -    Replace `<torch_version>` and `<cu_version>` (e.g., `cu118`) with your target versions.
-            -    `pip install --upgrade --no-deps --force-reinstall torch==<torch_version> --index-url https://download.pytorch.org/whl/<cu_version>`
+        -    Replace `<torch_version>` and `<cu_version>` (e.g., `cu118`) with your target versions.
+        -    `pip install --upgrade --no-deps --force-reinstall torch==<torch_version> --index-url https://download.pytorch.org/whl/<cu_version>`
     -   Reinstall JAX with CUDA support:
         -    Follow the instructions at https://jax.readthedocs.io/en/latest/installation.html
 -   (Optional) Login to Weights & Biases (W&B):
